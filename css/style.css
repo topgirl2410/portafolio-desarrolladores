@@ -16,12 +16,18 @@ html {
 /* VARIABLES */
 :root {
     --color-principal: #2563eb;
-    --accent-1: #ff7a59; /* naranja */
-    --accent-2: #ff6bcb; /* rosa */
-    --accent-3: #7c3aed; /* morado */
-    --accent-4: #06b6d4; /* teal */
-    --accent-5: #84cc16; /* lima */
-    --accent-6: #4f46e5; /* indigo */
+    --accent-1: #ff7a59;
+    /* naranja */
+    --accent-2: #ff6bcb;
+    /* rosa */
+    --accent-3: #7c3aed;
+    /* morado */
+    --accent-4: #06b6d4;
+    /* teal */
+    --accent-5: #84cc16;
+    /* lima */
+    --accent-6: #4f46e5;
+    /* indigo */
     --color-secundario: #0f172a;
     --color-fondo: #f1f5f9;
     --color-blanco: #ffffff;
@@ -96,7 +102,7 @@ main {
     gap: 20px;
     margin-bottom: 60px;
     /* Fondo y padding del contenedor para destacarlo */
-    background: linear-gradient(180deg, rgba(124,58,237,0.04), rgba(79,70,229,0.02));
+    background: linear-gradient(180deg, rgba(124, 58, 237, 0.04), rgba(79, 70, 229, 0.02));
     padding: 18px;
     border-radius: 12px;
     /* Igualar altura de filas para que las tarjetas queden simétricas (3 arriba, 3 abajo) */
@@ -106,7 +112,8 @@ main {
 
 .caja {
     background-color: var(--color-blanco);
-    padding: 30px 30px 30px 70px; /* espacio para icono */
+    padding: 30px 30px 30px 70px;
+    /* espacio para icono */
     text-align: left;
     font-weight: 700;
     border-radius: 10px;
@@ -116,7 +123,8 @@ main {
     min-height: 72px;
     display: flex;
     align-items: center;
-    height: 100%; /* permite que la tarjeta ocupe toda la fila del grid */
+    height: 100%;
+    /* permite que la tarjeta ocupe toda la fila del grid */
     justify-content: flex-start;
 }
 
@@ -156,7 +164,7 @@ main {
         position: absolute;
         inset: 0;
         border-radius: 10px;
-        background: linear-gradient(120deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+        background: linear-gradient(120deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
         opacity: 0;
         pointer-events: none;
         transition: opacity 200ms ease, transform 200ms ease;
@@ -177,7 +185,7 @@ main {
 
     .caja:active {
         transform: translateY(-2px) scale(0.997);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
     }
 }
 
@@ -195,14 +203,15 @@ button:active {
 
 /* Asegurar que el foco del teclado sea visible y consistente */
 button:focus-visible {
-    box-shadow: 0 0 0 4px rgba(37,99,235,0.14);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
 }
 
 .caja-label {
     display: block;
     margin-left: 6px;
     font-size: 1rem;
-    color: #fff; /* will be overwritten by each .caja text color if needed */
+    color: #fff;
+    /* will be overwritten by each .caja text color if needed */
 }
 
 /* Línea base común: centrar verticalmente texto y subtítulo dentro de la etiqueta */
@@ -222,7 +231,8 @@ button:focus-visible {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    color: currentColor; /* usa el color definido por la tarjeta */
+    color: currentColor;
+    /* usa el color definido por la tarjeta */
     transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
@@ -234,39 +244,94 @@ button:focus-visible {
 }
 
 /* Forzar que los elementos hijos de la rejilla ocupen toda la altura de su celda */
-.contenedor-tecnologias > .caja {
+.contenedor-tecnologias>.caja {
     align-self: stretch;
 }
 
 /* Ajuste específico: en Python el fondo es claro, usar texto oscuro */
-.caja.python .caja-label { color: #0b1220; }
+.caja.python .caja-label {
+    color: #0b1220;
+}
 
 /* Bordes de acento y colores específicos para icono */
-.caja.angular { border-left: 6px solid var(--accent-1); }
-.caja.angular svg { color: var(--accent-1); }
+.caja.angular {
+    border-left: 6px solid var(--accent-1);
+}
 
-.caja.sql { border-left: 6px solid var(--accent-2); }
-.caja.sql svg { color: var(--accent-2); }
+.caja.angular svg {
+    color: var(--accent-1);
+}
 
-.caja.java { border-left: 6px solid var(--accent-3); }
-.caja.java svg { color: var(--accent-3); }
+.caja.sql {
+    border-left: 6px solid var(--accent-2);
+}
 
-.caja.linux { border-left: 6px solid var(--accent-4); }
-.caja.linux svg { color: var(--accent-4); }
+.caja.sql svg {
+    color: var(--accent-2);
+}
 
-.caja.python { border-left: 6px solid var(--accent-5); }
-.caja.python svg { color: var(--accent-5); }
+.caja.java {
+    border-left: 6px solid var(--accent-3);
+}
 
-.caja.hacking { border-left: 6px solid var(--accent-6); }
-.caja.hacking svg { color: var(--accent-6); }
+.caja.java svg {
+    color: var(--accent-3);
+}
+
+.caja.linux {
+    border-left: 6px solid var(--accent-4);
+}
+
+.caja.linux svg {
+    color: var(--accent-4);
+}
+
+.caja.python {
+    border-left: 6px solid var(--accent-5);
+}
+
+.caja.python svg {
+    color: var(--accent-5);
+}
+
+.caja.hacking {
+    border-left: 6px solid var(--accent-6);
+}
+
+.caja.hacking svg {
+    color: var(--accent-6);
+}
 
 /* Colores por tecnología */
-.caja.angular { background: linear-gradient(135deg,var(--accent-1), #ff9a7a); color: #fff; }
-.caja.sql     { background: linear-gradient(135deg,var(--accent-2), #ff8ad0); color: #fff; }
-.caja.java    { background: linear-gradient(135deg,var(--accent-3), #9b6ffb); color: #fff; }
-.caja.linux   { background: linear-gradient(135deg,var(--accent-4), #38bdf8); color: #fff; }
-.caja.python  { background: linear-gradient(135deg,var(--accent-5), #cbe86b); color: #0b1220; }
-.caja.hacking { background: linear-gradient(135deg,var(--accent-6), #7c3aed); color: #fff; }
+.caja.angular {
+    background: linear-gradient(135deg, var(--accent-1), #ff9a7a);
+    color: #fff;
+}
+
+.caja.sql {
+    background: linear-gradient(135deg, var(--accent-2), #ff8ad0);
+    color: #fff;
+}
+
+.caja.java {
+    background: linear-gradient(135deg, var(--accent-3), #9b6ffb);
+    color: #fff;
+}
+
+.caja.linux {
+    background: linear-gradient(135deg, var(--accent-4), #38bdf8);
+    color: #fff;
+}
+
+.caja.python {
+    background: linear-gradient(135deg, var(--accent-5), #cbe86b);
+    color: #0b1220;
+}
+
+.caja.hacking {
+    background: linear-gradient(135deg, var(--accent-6), #7c3aed);
+    color: #fff;
+}
 
 /* FORMULARIO */
 form {
@@ -504,7 +569,8 @@ footer {
 
     .contenedor-tecnologias {
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto; /* en móvil no forzamos 1fr para evitar tarjetas muy altas */
+        grid-auto-rows: auto;
+        /* en móvil no forzamos 1fr para evitar tarjetas muy altas */
     }
 
     .descripcion h2 {
@@ -521,6 +587,7 @@ footer {
 
 /* Preferencias de reducción de movimiento para usuarios que lo soliciten */
 @media (prefers-reduced-motion: reduce) {
+
     .caja,
     button,
     * {
