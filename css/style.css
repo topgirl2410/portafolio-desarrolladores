@@ -160,6 +160,140 @@ footer {
 }
 
 /* MEDIA QUERY */
+@media (min-width: 2560px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 40px 140px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .menu-contenido a {
+        font-size: 1.2rem;
+    }
+
+    main {
+        max-width: 1600px;
+        /* 👈 clave: no usar 100% */
+        margin: 60px auto;
+    }
+
+    .descripcion h2 {
+        font-size: 3rem;
+        max-width: 1200px;
+        margin: 0 auto 20px;
+    }
+
+    .descripcion p {
+        font-size: 1.25rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .contenedor-tecnologias {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 40px;
+    }
+
+    .caja {
+        padding: 45px;
+        font-size: 1.3rem;
+    }
+
+    form {
+        max-width: 900px;
+        padding: 50px;
+    }
+
+    button {
+        padding: 16px;
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: 1.1rem;
+        padding: 25px;
+    }
+}
+
+
+@media (min-width: 1280px) {
+
+    main {
+        max-width: 1300px;
+    }
+
+    header {
+        padding: 30px 80px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu-contenido a {
+        font-size: 1.05rem;
+    }
+
+    .descripcion h2 {
+        font-size: 2.4rem;
+    }
+
+    .descripcion p {
+        font-size: 1.1rem;
+    }
+
+    .contenedor-tecnologias {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 35px;
+    }
+
+    form {
+        padding: 40px;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+
+    main {
+        max-width: 1100px;
+    }
+
+    .descripcion h2 {
+        font-size: 2.1rem;
+    }
+
+    .descripcion p {
+        font-size: 1.05rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .contenedor-tecnologias {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    form {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+
+
 @media (max-width: 768px) {
 
     header {
